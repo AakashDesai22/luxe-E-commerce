@@ -1,0 +1,147 @@
+.container {
+    padding-top: 80px;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #2a2a2d 0%, var(--bg-primary) 70%);
+    border-bottom: 1px solid var(--border);
+}
+
+.label {
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.countdown {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.timeUnit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeValue {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.timeLabel {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discountBadge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary);
+    color: var(--bg-primary);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.info {
+    padding: 1.5rem;
+}
+
+.name {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.priceRow {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+.oldPrice {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+}
+
+.newPrice {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown {
+        gap: 1rem;
+    }
+
+    .timeValue {
+        font-size: 2rem;
+    }
+}
